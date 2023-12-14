@@ -22,6 +22,13 @@
 ### By eyeballing the graph, we can see that the trend line is upward which indicates a positve correlation
 ### But to know how strong the correlation is, I went back to python and compute it
 
+### But first, I get the data by querying in SQL then save the result to csv
+```sql
+SELECT *
+FROM MyChessDotComClub..Members a INNER JOIN MyChessDotComClub..Joined_Details b ON a.member_id = b.id
+INNER JOIN MyChessDotComClub..Ratings c ON b.id = c.id
+```
+### now import it in python
 ```python
 res = pd.read_csv(r'Portfolio_DataEngineering\result.csv')
 correlation = res['tactics'].corr(res['rapid'])
