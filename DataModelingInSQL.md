@@ -38,7 +38,7 @@ CREATE TABLE Ratings
 #### Insert the csv files we created in python
 ```sql
 BULK INSERT MyChessDotComClub..Members
-FROM 'C:\Users\Yonel\Portfolio_DataEngineering\df_users.csv'
+FROM 'C:\Users\MyPath\Portfolio_DataEngineering\df_users.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
@@ -46,7 +46,7 @@ WITH (
 );
 
 BULK INSERT MyChessDotComClub..Joined_Details
-FROM 'C:\Users\Yonel\Portfolio_DataEngineering\df_joined_members.csv'
+FROM 'C:\Users\MyPath\Portfolio_DataEngineering\df_joined_members.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
@@ -55,7 +55,7 @@ WITH (
 
 
 BULK INSERT MyChessDotComClub..Ratings
-FROM 'C:\Users\Yonel\Portfolio_DataEngineering\df_stats_of_members.csv'
+FROM 'C:\Users\MyPath\Portfolio_DataEngineering\df_stats_of_members.csv'
 WITH (
     FIELDTERMINATOR = ',',
     ROWTERMINATOR = '\n',
