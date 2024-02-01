@@ -76,7 +76,7 @@ df_club_members
 print(f"Number of rows: {df_club_members.shape[0]}| Number of  unique username: {df_club_members['username'].nunique()}")
 ```
 
-#### Convert joined date from unix timestamp to actualreadable date
+#### Convert joined date from unix timestamp to actual readable date
 ```python
 df_club_members['joined'] = pd.to_datetime(df_club_members['joined'], unit='s') 
 df_club_members
